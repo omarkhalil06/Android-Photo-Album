@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+    <!--    &lt;!&ndash;  Title bar &ndash;&gt;
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/add_album"
+            android:gravity="center"
+            android:background="@color/Black"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            />-->
+
+    <!--  Form for adding -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:padding="20dp"
+        >
+
+        <!--  Album name label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_album_name_label"
+            android:textColor="@color/MyDarkGreen"
+            android:paddingBottom="2dp"/>
+
+        <!-- Album name field -->
+        <EditText
+            android:id="@+id/album_name"
+            android:layout_width="match_parent"
+            android:background="@android:drawable/editbox_background"
+            android:hint="@string/add_album_name_hint"
+            android:layout_height="wrap_content"
+            />
+
+        <!--  Buttons for save and cancel -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp">
+
+            <Button style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/album_save"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/Black"
+                android:text="@string/add_album_save_label"
+                android:textSize="16sp"
+                android:textColor="@color/White"
+                android:onClick="save"
+                />
+
+<!--            <Button style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/album_open"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/Black"
+                android:text="@string/add_album_open_label"
+                android:textSize="16sp"
+                android:textColor="@color/White"
+                android:onClick="open"
+                />-->
+
+            <Button style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/album_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@color/Black"
+                android:text="@string/add_album_cancel_label"
+                android:textSize="16sp"
+                android:textColor="@color/White"
+                android:onClick="cancel"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

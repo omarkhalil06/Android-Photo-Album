@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cs213.androidapp91">
+
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.providers.media.MediaDocumentsProvider"/>
+
+    <application
+        android:theme="@style/AppTheme"
+        android:grantUriPermissions="true"
+        android:supportsRtl="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="true">
+
+        <activity android:name=".PhotoAlbum">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AddAlbum">
+            android:parentActivityName=".PhotoAlbum"
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".PhotoAlbum"/>
+        </activity>
+
+        <activity android:name=".EditAlbum">
+            android:parentActivityName=".PhotoAlbum"
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".PhotoAlbum"/>
+        </activity>
+
+        <activity android:name=".Gallery">
+            android:parentActivityName=".PhotoAlbum"
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:grantUriPermissions="true" android:value=".PhotoAlbum" android:permission="android.permission.MANAGE_DOCUMENTS"/>
+        </activity>
+
+        <activity android:name=".DisplayPhoto">
+            android:parentActivityName=".Gallery"
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:grantUriPermissions="true" android:value=".Gallery" android:permission="android.permission.MANAGE_DOCUMENTS"/>
+        </activity>
+
+    </application>
+
+</manifest>

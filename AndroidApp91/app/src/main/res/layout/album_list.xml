@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="cs213.androidapp91.PhotoAlbum">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+<!--    &lt;!&ndash; Compound drawable (text + icon) layout for add song trigger &ndash;&gt;
+    <TextView
+        android:id="@+id/add_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Black"
+        android:drawableEnd="@drawable/ic_action_add_white"
+        android:drawableRight="@drawable/ic_action_delete_white"
+        android:drawablePadding="5dp"
+        android:paddingTop="6dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/album_list"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="addAlbum"/>-->
+
+    <!-- Layout for song list -->
+    <ListView
+        android:id="@+id/album_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/Black"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

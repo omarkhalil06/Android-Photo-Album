@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Photo Album</string>
+
+    <string-array name="album_array">
+        <item>Rutgers University</item>
+        <item>Cats and Dogs</item>
+    </string-array>
+
+    <string name="album_list">Albums</string>
+
+    <string name="add_album">Add or Edit/Delete Album</string>
+    <string name="add_album_name_label">Name: (required)</string>
+    <string name="add_album_name_hint">Album Name</string>
+    <string name="add_album_save_label">" Save "</string>
+    <string name="add_album_cancel_label">Cancel</string>
+    <string name="add_album_open_label">Open</string>
+    <string name="action_add">Add</string>
+
+    <string name="delete">Delete Album</string>
+    <string name="edit">Edit Album</string>
+    <string name="open">Open Album</string>
+    <string name="cancel">Cancel</string>
+
+</resources>
